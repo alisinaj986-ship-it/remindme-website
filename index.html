@@ -3,8 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RemindMe</title>
-  <link rel="stylesheet" href="style.css">
+
+  <title>RemindMe - Remember what matters</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #202124;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6c63ff, #8f7cff);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    header h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .downloads {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      color: #202124;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+    }
+
+    .card strong {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .card small {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .android {
+      border: 2px solid #6c63ff;
+    }
+
+    .ios {
+      border: 2px solid #ddd;
+      cursor: default;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .feature .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #202124;
+      color: #aaa;
+      margin-top: 50px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 40px;
+      }
+
+      header p {
+        font-size: 17px;
+      }
+
+      .container {
+        padding: 35px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -14,65 +156,76 @@
     <p>Remember what matters.</p>
   </header>
 
-  <main>
+  <main class="container">
 
-    <section class="hero">
-      <h2>Stay organized. Stay on track.</h2>
-      <p>
-        RemindMe helps you manage your reminders, check your calendar,
-        and stay motivated with your pet.
-      </p>
+    <h2 class="section-title">Get RemindMe</h2>
 
-      <div class="downloads">
+    <div class="downloads">
 
-        <!-- ANDROID DOWNLOAD -->
-        <a class="card android"
-           href="https://github.com/alisinaj986-ship-it/remindme-website/releases/download/v1.0.1/app-release.apk>
-          <strong>🤖 Download for Android</strong>
-          <small>Download the latest Android version</small>
-        </a>
+      <!-- ANDROID DOWNLOAD -->
+      <a
+        class="card android"
+        href="https://github.com/alisinaj986-ship-it/remindme-website/releases/download/v1.0.1/app-release.apk"
+      >
+        <strong>🤖 Download for Android</strong>
+        <small>Get the latest RemindMe APK</small>
+      </a>
 
-        <!-- IPHONE -->
-        <div class="card iphone">
-          <strong>🍎 iPhone / iPad</strong>
-          <small>Coming soon</small>
-        </div>
-
+      <!-- IOS -->
+      <div class="card ios">
+        <strong>🍎 iPhone & iPad</strong>
+        <small>Coming soon</small>
       </div>
-    </section>
 
-    <section class="features">
-      <h2>Why RemindMe?</h2>
+    </div>
 
-      <div class="feature-grid">
+    <h2 class="section-title">Features</h2>
 
-        <div class="feature">
-          <h3>⏰ Reminders</h3>
-          <p>Create reminders so you don't forget important tasks.</p>
-        </div>
+    <div class="features">
 
-        <div class="feature">
-          <h3>📅 Calendar</h3>
-          <p>See your upcoming reminders in an easy calendar view.</p>
-        </div>
-
-        <div class="feature">
-          <h3>🐾 Pet Rewards</h3>
-          <p>Complete tasks and take care of your virtual pet.</p>
-        </div>
-
-        <div class="feature">
-          <h3>🌙 Dark Mode</h3>
-          <p>Use RemindMe comfortably in light or dark mode.</p>
-        </div>
-
+      <div class="feature">
+        <div class="icon">⏰</div>
+        <h3>Reminders</h3>
+        <p>Create reminders so you don't forget important tasks.</p>
       </div>
-    </section>
+
+      <div class="feature">
+        <div class="icon">📅</div>
+        <h3>Calendar</h3>
+        <p>See your reminders organized by date.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🐶</div>
+        <h3>Pet Rewards</h3>
+        <p>Complete reminders and take care of your virtual pet.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🌙</div>
+        <h3>Dark Mode</h3>
+        <p>Switch between light and dark mode whenever you want.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🎨</div>
+        <h3>Custom Colors</h3>
+        <p>Choose an app color that matches your style.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">✨</div>
+        <h3>Simple & Easy</h3>
+        <p>Keep your tasks organized without making things complicated.</p>
+      </div>
+
+    </div>
 
   </main>
 
   <footer>
-    <p>© 2026 RemindMe. All rights reserved.</p>
+    <p><strong>RemindMe</strong> — Remember what matters.</p>
+    <p>© 2026 RemindMe</p>
   </footer>
 
 </body>
